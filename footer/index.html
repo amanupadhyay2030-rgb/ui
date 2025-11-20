@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Footer</title>
+  <style>
+    body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background-color: #f5f5f5;
+}
+
+footer {
+  background-color: #004D40;
+  overflow: hidden;
+  padding-right: 40px;
+  color: #dcdcdc;
+  width: 100%;
+  height: auto;
+  flex-direction: column;
+  position: relative;
+}
+
+#abhi {
+  padding-top: 2px;
+  margin-top: 2px;
+}
+
+button {
+  font-family: "Poppins", sans-serif;
+  background-color: #6d737d;
+}
+
+footer,
+footer * {
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.footer-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding-bottom: 10px;
+  gap: 2.5px;
+  flex-wrap: nowrap;
+  text-align: left;
+  flex-shrink: 0;
+}
+
+.footer-col {
+  text-align: left;
+  flex: 1;
+  color: white;
+  width: 200px;
+  padding-left: 35px;
+}
+
+.footer-col h2 {
+  color: white;
+  font-size: 16px;
+  font-weight: 700;
+  padding-bottom: 1px;
+  margin-bottom: 5px;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  gap: 20px;
+}
+
+.footer-col ul li {
+  margin-bottom: 0;
+}
+
+.footer-col ul li a {
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s ease;
+}
+
+#abhi {
+  margin-top: 2px;
+}
+
+.hide h2 {
+  margin-bottom: 2px;
+}
+
+.hide p {
+  margin-top: 0;
+  line-height: 1.2;
+}
+
+.footer-col ul li a:hover {
+  color: white;
+}
+
+.newsletter {
+  max-width: 400px;
+  flex: 1;
+  padding: 0 5px 5px 35px;
+  margin-top: 0;
+  /* border-top: 1px solid #ffffff33; */
+  text-align: left;
+}
+
+.newsletter h3 {
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.newsletter p {
+  color: #dddddd;
+  margin-bottom: 15px;
+}
+
+.newsletter input {
+  width: 85%;
+  height: 15px;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  outline: none;
+  font-size: 14px;
+  margin-right: 8px;
+}
+
+h2 {
+  font-size: 16px;
+  font-weight: 700;
+  font-family: sans-serif;
+  padding-bottom: 1px;
+}
+
+.header {
+  height: 50em;
+}
+
+.newsletter button {
+  background-color: #6d737d;
+  color: #ffffff;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 2px;
+}
+
+.newsletter button:hover {
+  background-color: #505257;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+}
+
+#connect {
+  /* margin-top: 5px; */
+  /* padding: 1px; */
+  margin-bottom: 2px;
+  /* display:; */
+}
+
+#abhi {
+  margin-top: 2px;
+}
+
+.social-icons {
+  margin-top: 2px;
+  display: flex;
+  gap: 18px;
+  padding: 2px 5px;
+  align-items: center;
+}
+
+.social-icons a img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.social-icons a:hover {
+  background-color: #ffffff33;
+  transform: scale(1.1);
+}
+
+.social-icons a {
+  width: 35px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff1a;
+  border-radius: 50%;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.social-icons a:hover img {
+  transform: scale(1.05);
+}
+
+.iso-certification {
+  height: 100px;
+  border: 1px solid #fff;
+  margin-left: 35px;
+  margin-bottom: 0%;
+  margin-right: 10px;
+  flex: 0 0 auto;
+}
+
+.footer-copy {
+  text-align: left;
+  font-size: 14px;
+  color: #bbbbbb;
+  padding: 2.5px;
+  flex: 1;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+.detail {
+  padding-left: 10px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.detail > div {
+  display: flex;
+  align-items: center; 
+}
+
+.hide {
+  margin-top: 35px;
+}
+
+.parent {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end; 
+  border-top: 1px solid #ffffff33;
+   padding: 5px;
+  padding-left: 5px;
+  flex-shrink: 0;
+  position: relative; 
+}
+
+.el {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 150px;
+  gap: 7.5px;
+  width: 50%;
+}
+
+.a1 {
+  padding-left: 5px;
+}
+@media only screen and (max-width: 768px) {
+  footer {
+   background-color: #004D40;  /* mobile background */
+    padding: 20px 20px 10px;
+    display: block;
+    color: white;
+    position: relative;
+  }
+
+  .newsletter {
+    max-width: 100%;
+    padding: 0;
+    margin-bottom: 20px;
+    text-align: left;
+    color: white;
+  }
+
+  .newsletter h2 {
+    font-size: 16px;
+    margin-bottom: 8px;
+  }
+
+  .newsletter p {
+    font-size: 16px;
+    margin-bottom: 18px;
+    line-height: 1.4;
+  }
+
+  .newsletter input {
+    width: calc(100% - 90px);
+    height: 35px;
+    margin-right: 0;
+    margin-bottom: 5px;
+    padding: 0 10px;
+    box-sizing: border-box;
+    border-radius: 4px;
+    border: none;
+    outline: none;
+    font-size: 14px;
+  }
+
+  .newsletter button {
+    width: 80px;
+    height: 30px;
+    padding: 0;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    border: none;
+    background-color: #6d737d;
+    color: white;
+  }
+
+  .newsletter button:hover {
+    background-color: #505257;
+  }
+
+  .parent {
+    flex-direction: column;
+    align-items: flex-start;
+    border-top: none;
+    margin-bottom: 20px;
+    padding-left: 0;
+    display: flex;
+  }
+
+  .iso-certification {
+    width: 70px;
+    height: 70px;
+    margin-right: 20px;
+    border: none;
+    flex-shrink: 0;
+  }
+
+  .detail {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    color: white;
+    font-weight: 600;
+    font-size: 15px;
+  }
+
+  .detail > div {
+    display: flex;
+    align-items: center;
+  }
+
+  .detail img {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+  }
+
+  .social-icons {
+    margin-top: 15px;
+    justify-content: left;
+    margin-left: 5px;
+    padding-left: 5px;
+    gap: 25px;
+    width: 100%;
+  }
+
+  .footer-copy {
+    text-align: center;
+    color: white;
+    font-size: 14px;
+    padding-top: 20px;
+    margin-bottom: 5px;
+    position: static;
+  }
+
+  .footer-container {
+    display: block;
+    padding: 0;
+  }
+
+  .el {
+    display: flex;
+    flex-direction: column;
+    border-top: 1px solid #aaaabf66;
+    width: 100%;
+  }
+
+  .footer-col {
+    width: 100%;
+    padding-left: 0;
+    margin-bottom: 12px;
+    border-bottom: 1px solid #aaaabf66;
+  }
+
+  .footer-col h2 {
+    cursor: pointer;
+    margin-bottom: 0;
+    padding: 12px 0;
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .footer-col h2::after {
+    content: "▼";
+    font-size: 14px;
+    transition: transform 0.3s ease;
+  }
+
+  .footer-col.active h2::after {
+    transform: rotate(-180deg);
+  }
+
+  .footer-col ul {
+    display: none;
+    margin-top: 12px;
+    padding-left: 15px;
+  }
+
+  .footer-col.active ul {
+    display: block;
+  }
+
+  .footer-col ul li {
+    margin-bottom: 8px;
+  }
+
+  .footer-col ul li a {
+    color: white;
+    font-weight: 400;
+    font-size: 16px;
+    text-decoration: none;
+  }
+
+  .footer-col ul li a:hover {
+    text-decoration: underline;
+  }
+}
+
+
+  </style>
+</head>
+
+<body>
+  <header class="header"></header>
+  <footer>
+    <div class="footer-container">
+      <div class="el">
+      <div class="footer-col">
+        <h2>ABOUT US</h2>
+        <ul>
+          <li><a href="#">Our Story</a></li>
+          <li><a href="#">Advisory Board</a></li>
+          <li><a href="#">Case Studies</a></li>
+          <li><a href="#">Career</a></li>
+          <li><a href="http://127.0.0.1:5501/contact-page/contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col" >
+        <h2>CAPABILITIES</h2>
+        <ul>
+          <li><a href="#">Control Panel Manufacturing</a></li>
+          <li><a href="#">OEM Integration</a></li>
+          <li><a href="#">Industry 4.0</a></li>
+          <li><a href="#">Prayas Academy</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h2>INDUSTRIES</h2>
+        <ul>
+          <li><a href="https://absolutemotion.in/process-industry/">Process Industry</a></li>
+          <li><a href="https://absolutemotion.in/water-waste-water/">Water & Waste Water</a></li>
+          <li><a href="#">HVAC</a></li>
+          <li><a href="#">Food & Beverages</a></li>
+          <li><a href="#">Pharmaceuticals</a></li>
+          <li><a href="#">Consumer Goods Packaging</a></li>
+        </ul>
+      </div>
+    </div>
+
+
+      <div class="newsletter">
+        <span id="connect">
+          <h2> CONNECT WITH US</h2>
+        </span>
+        <div class="social-icons">
+
+          <a href="https://www.linkedin.com/company/absolutemotion/" target="_blank">
+            <img src="lin.png" alt="LinkedIn"></a>
+          <a href="https://www.facebook.com/share/17HjRjDfw4/" target="_blank"><img src="fb.png" alt="Facebook"></a>
+          <a href="https://www.instagram.com/theprayasacademy?igsh=eHVwcTFobWZiZ3Br" target="_blank"><img src="ins.gif"
+              alt="Instagram"></a>
+          <a href="https://www.youtube.com/@theautomationrockstar?si=QvD8eCII3FP3GOX3" target="_blank"><img
+              src="utube.png" alt="YouTube"></a>
+
+        </div>
+        <div class="hide">
+          <h2>SUBSCRIBE TO OUR NEWSLETTER</h2>
+          <p>Stay up to date on the latest Absolute's Ecosystem News & Insights.</p>
+        </div>
+        <input type="email" placeholder="Your Email*"><br>
+        <button>Submit</button>
+      </div>
+    </div>
+    <span class="parent">
+      <div class="iso-certification">
+        <img src="https://absolutemotion.in/wp-content/uploads/2025/11/iso.jpg" alt="ISO Certification"
+          style="width: 100%; height: 100%; object-fit: cover;">
+      </div>
+           <div class="detail">
+            <div class="address" >
+              <img src="ad.png" alt="address" style="width: 22px; height: 22px; background: transparent;">
+              <span class="a1">R-601/1, TTC Industrial Area<br> Rabale MIDC, Navi Mumbai - 400701, Maharashtra,
+          India</span>
+            </div>
+            <div class="call-icon">
+              <img src="call.png" alt="Phone" style="width: 22px; height: 22px; background: transparent;">
+              <span class="a1">+91-22-4500 0947</span>
+            </div>
+            <div class="email-icon">
+              <img src="mail.png" alt="Email" style="width: 23px; height: 23px; background: transparent;">
+              <span class="a1">info@absolutemotion.in</span>            
+            </div>
+            </div>
+      <div class="footer-copy">© 2025 Absolute Motion Private Limited | All Rights Reserved</div>
+    </span>
+  </footer>
+  <script>
+  document.querySelectorAll("footer .footer-col h2").forEach(header => {
+    header.addEventListener("click", () => {
+      header.parentElement.classList.toggle("active");
+    });
+  });
+</script>
+</body>
+
+</html>

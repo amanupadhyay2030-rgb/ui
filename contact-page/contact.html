@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact Page</title>
+  <style>
+    body {
+      font-family: 'Urbanist', sans-serif;
+      background: #fff;
+      color: #000;
+      margin: 40px;
+      padding: 20px 24px;
+    }
+
+    .logo {
+      font-weight: bold;
+      font-size: 48px;
+      letter-spacing: 10px;
+      user-select: none;
+    }
+
+    .header-text {
+      font-weight: 500;
+      font-size: 68px;
+      margin-top: 20px;
+      line-height: 1.50em;
+    }
+
+    .arrow {
+      font-size: 36px;
+      height: 1em;
+      width: 1em;
+      font-style: italic;
+      position: relative;
+      display: block;
+      margin: 10px 0 40px 0;
+      user-select: none;
+    }
+
+    .project-heading {
+      font-weight: 500;
+      font-size: 38px;
+      margin-bottom: 4px;
+    }
+
+    .project-subheading {
+      font-weight: 400;
+      font-size: 18px;
+      margin-top: 4px;
+      margin-bottom: 20px;
+    }
+
+    .contact-me {
+      font-weight: 500;
+      font-size: 38px;
+      margin-top: 60px;
+      margin-bottom: 8px;
+    }
+
+    .required-note {
+      font-weight: 400;
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+
+    form {
+      max-width: 400px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: 500;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+      width: 100%;
+      padding: 10px 8px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+      font-family: inherit;
+      box-sizing: border-box;
+      border-radius: 0;
+      resize: vertical;
+    }
+
+    textarea {
+      height: 120px;
+    }
+
+    button {
+      background-color: #000;
+      color: #fff;
+      font-size: 16px;
+      font-weight: 600;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      letter-spacing: 1px;
+    }
+
+    button:hover {
+      background-color: #444;
+    }
+
+    .company-contact {
+      margin-bottom: 40px;
+      color: #000000;
+    }
+
+    .company-contact p {
+      font-size: 16px;
+      margin: 5px 0;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .company-contact a {
+      color: #000000;
+      text-decoration: none;
+    }
+
+    .company-contact a:hover {
+      text-decoration: underline;
+    }
+
+    .address-container {
+      display: flex;
+      gap: 60px;
+      flex-wrap: wrap;
+      margin-top: 20px;
+    }
+
+    .address-block {
+      max-width: 300px;
+    }
+
+    .address-block h3 {
+      margin-bottom: 10px;
+      letter-spacing: 1px;
+      font-weight: 700;
+      font-size: 18px;
+      text-transform: uppercase;
+    }
+
+    .address-block p {
+      line-height: 1.4;
+      margin-bottom: 15px;
+      font-weight: 400;
+      font-size: 14px;
+    }
+
+    .address-block button.get-directions {
+      background-color: #000000;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 20px;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 14px;
+      letter-spacing: 0.5px;
+    }
+
+    .address-block button.get-directions:hover {
+      background-color: #000000;
+    }
+
+    .icon-envelope {
+      border: 1px solid #000000;
+      padding: 3px 6px;
+      border-radius: 3px;
+      font-size: 14px;
+      display: inline-block;
+      line-height: 1;
+      user-select: none;
+    }
+
+    .icon-phone {
+      color: #000000;
+      font-size: 16px;
+      user-select: none;
+    }
+
+    .hide {
+      height: 20rem;
+    }
+    /* .box{
+      flex-direction: row;
+    } */
+
+    @media (max-width: 700px) {
+      .address-container {
+        display: flex;
+        gap: 60px;
+        flex-wrap: wrap;
+        margin-top: 20px;
+      }
+
+      body {
+        font-family: 'Urbanist', sans-serif;
+        background: #fff;
+        color: #000;
+        margin: 20px;
+        margin-left: 0px;
+        padding-left: 0px;
+        padding: 20px 24px;
+      }
+
+      .header-text {
+        font-weight: 500;
+        font-size: 45px;
+        margin-top: 20px;
+        line-height: 1.50em;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="logo">
+      <img src="https://absolutemotion.in/wp-content/uploads/2025/11/Absolute_Motion_logo.png" alt="Absolute Motion">
+    </div>
+  </header>
+<div class="box">
+  <div class="header-text">
+    Get in touch.<br />
+    We'd love to hear from you.
+  </div>
+
+  <div class="arrow"><i>&#8595;</i></div>
+</div>
+  <div class="hide"></div>
+
+  <div class="project-heading">You Have a Project In Mind?</div>
+  <div class="project-subheading">Send us a message or just say hello</div>
+
+  <div class="company-contact">
+    <div class="emails-and-phone">
+      <p><span class="icon-envelope">&#9993;</span> <a href="mailto:info@absolutemotion.in">info@absolutemotion.in</a>
+      </p>
+      <p><span class="icon-envelope">&#9993;</span> <a
+          href="mailto:prayas@absolutemotion.in">prayas@absolutemotion.in</a></p>
+      <p><span class="icon-phone">&#9742;</span> +91-22-4500-0947</p>
+    </div>
+
+    <div class="address-container">
+      <div class="address-block">
+        <h3>Absolute Headquarters</h3>
+        <p>
+          ABSOLUTE MOTION PVT. LTD., R-601/1,<br />
+          TTC Industrial Area, Rabale MIDC, Navi Mumbai - 400701,<br />
+          Maharashtra, India
+        </p>
+        <button class="get-directions">Get Directions</button>
+      </div>
+
+      <div class="address-block">
+        <h3>Prayas - The Automation Academy</h3>
+        <p>
+          ABSOLUTE MOTION PVT. LTD., R-601/1,<br />
+          TTC Industrial Area, Rabale MIDC,<br />
+          Navi Mumbai - 400701, Maharashtra, India
+        </p>
+        <button class="get-directions">Get Directions</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="contact-me">Contact US</div>
+  <div class="required-note">Fields marked with an * are required.</div>
+
+  <form action="#" method="POST" novalidate>
+    <label for="name">Your Name *</label>
+    <input type="text" id="name" name="name" required />
+
+    <label for="email">Your Email *</label>
+    <input type="email" id="email" name="email" required />
+
+    <label for="subject">Subject</label>
+    <input type="text" id="subject" name="subject" />
+
+    <label for="message">Message *</label>
+    <textarea id="message" name="message" required></textarea>
+
+    <button type="submit">Send Message</button>
+  </form>
+
+</body>
+
+</html>
