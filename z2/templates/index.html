@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Bill Search</title>
+</head>
+
+<body>
+    <style>
+        body{
+            text-align: center;
+            align-items: center;
+        }
+        h2 {
+            align-items: center;
+            font-family: Urbanist;
+
+        }
+        .form{
+            align-items: center;
+            text-align: center;
+            height: 60%;
+            width :40%;
+            background-color: #004D40;
+            animation:backwards
+        }
+        h2{
+            text-align:center ;
+            font-size: larger;
+            font-weight: 600;
+        }
+    </style>
+    <div class="form">
+        <h2>Search Bill</h2>
+        <form action="/bill" method="POST">
+            <label>Month:</label>
+            <select name="month" required>
+                <option value="">Select Month</option>
+                <option value="1">January</option>
+                <option value="2">February</option>
+                <option value="3">March</option>
+                <option value="4">April</option>
+                <option value="5">May</option>
+                <option value="6">June</option>
+                <option value="7">July</option>
+                <option value="8">August</option>
+                <option value="9">September</option>
+                <option value="10">October</option>
+                <option value="11">November</option>
+                <option value="12">December</option>
+            </select>
+            <label>Year:</label>
+            <input type="number" name="year" min="2020" max="2050" required>
+            <button type="submit">Get Bill</button>
+        </form>
+    </div>
+</body>
+
+</html>

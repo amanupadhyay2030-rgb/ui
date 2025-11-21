@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Customer Bill</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: #f2f2f2;
+        }
+
+        .page {
+            width: 794px;
+            min-height: 1123px;
+            background: white;
+            margin: 0 auto;
+            padding: 30px 40px;
+            border: 1px solid #555;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            text-decoration: underline;
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 22px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        table th,
+        table td {
+            border: 1px solid #333;
+            padding: 10px;
+            font-size: 16px;
+        }
+
+        table th {
+            background: #e6e6e6;
+        }
+
+        #downloadBtn {
+            display: inline-block;
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 18px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+        #downloadBtn:hover {
+            background: #0056b3;
+        }
+
+        .space {
+            height: 2rem;
+        }
+
+        @media print {
+            #downloadBtn {
+                display: none;
+            }
+
+            body {
+                background: white;
+            }
+
+            .page {
+                box-shadow: none;
+                border: none;
+                width: 100%;
+                padding: 0;
+            }
+        }
+
+        body {
+            font-family: Arial;
+        }
+
+        .page {
+            width: 100%;
+            height: 1000px;
+            page-break-after: always;
+            padding: 20px;
+            border: 1px solid #000;
+            margin-bottom: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 8px;
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid #555;
+        }
+
+        th {
+            background: #e3e3e3;
+        }
+    </style>
+
+    <div class="page">
+
+        <h1>Electricity Bill</h1>
+
+        <h3>Customer Info</h3>
+        <p><b>Customer Number:</b>000110129319</p>
+        <p><b>Customer Name:</b>JE MECHANICAL PRIVATE LIMITED </p>
+        <p><b>Address:</b> PLOT NO-R-601/1, TTC INDUSTRIS AREA, THANE THANE, Navi Mumbai (M Corp.) </p>
+        <p><b>Pin Code:</b>400701</p>
+        <div class="space"></div>
+
+        <h3>Billing History</h3>
+        <table>
+            <tr>
+                <th>Bill Month </th>
+                <th>Units </th>
+                <th>KVA</th>
+                <th>Bill Amount</th>
+            </tr>
+            {% for record in billing_history %}
+            <tr>
+                <td>{{ record.bill_month }}</td>
+                <td>{{ record.total_units|float|round(2) }}</td>
+                <td>{{ record.total_kva|float|round(2) }}</td>
+                <td>{{ record.total_rate|float|round(2) }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+
+        <h3>Current Consumption Details</h3>
+        <table cellpadding="5" cellspacing="0" style="width:100%;border-collapse:collapse;">
+    <thead style="background-color: #e3e3e3; text-align:center;">
+        <tr>
+            <th>Reading Date</th>
+            <th>KWH</th>
+            <th>KVA</th>
+            <th>KW</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for row in consumption_rows %}
+        <tr>
+            <td>{{ row.label }}<br>{{ row.date }}</td>
+            <td>{{ '%.3f'|format(row['KWH'])|float|round(2) }}</td>
+            <td>{{ '%.2f'|format(row['KVA'])|float|round(2) }}</td>
+            <td>{{ '%.2f'|format(row['KW'])|float|round(2) }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+        
+    </div>
+
+</body>
+
+</html>
